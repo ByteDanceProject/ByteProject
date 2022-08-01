@@ -3,6 +3,7 @@
     padding: 0;
 }
 body {
+    display: grid;
     box-sizing: border-box;
 }
 ul {
@@ -11,24 +12,26 @@ ul {
 a {
     text-decoration: none;
 }
-nav {
+header {
     width: 20%;
     margin: auto;
 }
-nav ul li {
-    display: inline-block;
+header ul {
+    display: flex;
+}
+header ul li {
     margin: 10% auto;
     padding-left:  20%;
 }
-nav ul li a { 
+header ul li a { 
   color: rgb(0, 252, 168);
-  font-size: 25px;
+  font-size: 1.9vh;
   line-height: 25px;
 }
 .slider {
     position: relative;
     width: 100%;
-    height: 44vh;
+    height: 55vh;
     /* overflow: hidden; */
 }
 .bg {
@@ -41,8 +44,9 @@ nav ul li a {
  filter: blur(140px);
 }
 .slider ul {
-    position: relative;
+    position: absolute;
     left: 50%;
+    top: 10%;
     transform: translate(-40%, -50%);
     width: 70%;
     z-index: 2;
@@ -58,8 +62,8 @@ transition: opacity 1s;
 opacity: 1;
 }
 .slider ul li img {
-width: 100%;
-height: 100%;
+width: 110%;
+border-radius: 15px;
 }
 article {
     position: relative;
@@ -73,4 +77,67 @@ article h1 {
     font-weight: 500;
     text-align: center;
     line-height: 75px;
+}
+
+/* 导航栏 */
+nav {
+    position: fixed;
+    left: 0;
+    width: 100px;
+    height: 600px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(243, 244, 246,.3);
+    border-radius: 10px;
+    transition: .3s;
+    overflow: hidden;
+    z-index: 3;
+}
+.nav-a {
+    display: block;
+    height: 15%;
+    width: 85%;
+    margin: 9px;
+    position: relative;
+    transition: .3s;
+    color: #000;
+}
+.nav-a i {
+    font-size: 40px;
+    position: absolute;
+    margin: 7px 0 0 13px;
+}
+.box:nth-child(1)::before,
+.box:nth-child(5)::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(55, 65, 81);
+    position: absolute;
+    bottom: -10px;
+}
+
+.nav-a span{
+    position: relative;
+    top: 22px;
+    left: 80px;
+    font: 500 20px;
+    opacity: 0;
+    transition: .1s;
+}
+nav:hover {
+    width: 270px;
+}
+.nav-a:hover {
+    background-color: rgb(209, 213, 219);
+    color: rgb(241, 159, 159);
+}
+nav:hover span{
+    opacity: 1;
+}
+.nav-a:hover {
+    color: #fff;
 }
