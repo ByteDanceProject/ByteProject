@@ -12,6 +12,8 @@ ul {
 a {
     text-decoration: none;
 }
+
+/* 头部 */
 header {
     width: 20%;
     margin: auto;
@@ -28,6 +30,7 @@ header ul li a {
   font-size: 1.9vh;
   line-height: 25px;
 }
+/* 轮播图部分 */
 .slider {
     position: relative;
     width: 100%;
@@ -47,7 +50,7 @@ header ul li a {
     position: absolute;
     left: 50%;
     top: 10%;
-    transform: translate(-40%, -50%);
+    transform: translate(-40%, -50%);/* 这里有一个图片无法居中的bug待解决 */
     width: 70%;
     z-index: 2;
 }
@@ -84,7 +87,7 @@ nav {
     position: fixed;
     left: 0;
     width: 100px;
-    height: 600px;
+    height: 550px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -109,17 +112,6 @@ nav {
     position: absolute;
     margin: 7px 0 0 13px;
 }
-.box:nth-child(1)::before,
-.box:nth-child(5)::before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: rgb(55, 65, 81);
-    position: absolute;
-    bottom: -10px;
-}
-
 .nav-a span{
     position: relative;
     top: 22px;
@@ -129,7 +121,7 @@ nav {
     transition: .1s;
 }
 nav:hover {
-    width: 270px;
+    width: 200px;
 }
 .nav-a:hover {
     background-color: rgb(209, 213, 219);
@@ -137,7 +129,4 @@ nav:hover {
 }
 nav:hover span{
     opacity: 1;
-}
-.nav-a:hover {
-    color: #fff;
 }
