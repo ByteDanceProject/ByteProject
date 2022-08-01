@@ -50,7 +50,7 @@ header ul li a {
     position: absolute;
     left: 50%;
     top: 10%;
-    transform: translate(-40%, -50%);/* 这里有一个图片无法居中的bug待解决 */
+    transform: translate(-40%, -50%);/* 这里有一个图片无法居中的bug，待解决 */
     width: 70%;
     z-index: 2;
 }
